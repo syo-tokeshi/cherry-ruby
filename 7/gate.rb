@@ -8,17 +8,10 @@ class Gate
   end
 
   def self.jugde(cicket,to_gate)
-    if cicket.stamped == to_gate.name
-      p "無事出れました"
-      p  cicket.stamped
-      p  to_gate.name
-    else
-      p "間違いだよ"
-      p  cicket.stamped
-      p  to_gate.name
-    end
+    return if cicket.stamped != to_gate.name
+
+    p "無事出れました"
+    # p "押されたスタンプ#{cicket.stamped} 行き先#{to_gate.name}"
   end
-
-
 
 end

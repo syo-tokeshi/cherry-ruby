@@ -4,6 +4,7 @@ class Cicket
   def initialize(fare,to)
     @fare = fare
     @to = to
+    # チケット購入時は、sスタンおうは押されない(まだ改札を通ってないので)
     @stamped = ""
   end
 
