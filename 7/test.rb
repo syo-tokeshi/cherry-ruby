@@ -39,7 +39,7 @@ class GateTest < Minitest::Test
   def test_exit_gate_failure
     @toke.to_gate(@cicket_to_shibuya)
     # 渋谷行きのチケット持って、新宿で降りるとエラーになる
-    assert_equal("無事出れました", @toke.exit_gate(@cicket_to_shibuya,@gate_to_shinjuku))
+    assert_equal("チケットのスタンプと行き先が間違っています", @toke.exit_gate(@cicket_to_shibuya,@gate_to_shinjuku))
   end
 
 end
