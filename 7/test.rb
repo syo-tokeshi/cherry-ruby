@@ -4,7 +4,7 @@ require_relative './cicket'
 require_relative './human'
 require 'minitest/autorun'
 
-# 手続き的に書いた、最初のコード
+# 手続き的に書いた、最初のコード。いきなりTDDでは書けなかった
 # toke = Human.new("toke")
 # to_shibuya = Cicket.new(160,"shibuya")
 # to_gate = Gate.new("shibuya")
@@ -17,15 +17,20 @@ class GateTest < Minitest::Test
   def setup
     @toke = Human.new("toke")
     @cicket_to_shibuya = Cicket.new(160,"shibuya")
+    @cicket_to_shinjuku = Cicket.new(190,"shinjuku")
     @gate_to_shibuya = Gate.new("shibuya")
     @gate_to_shinjuku = Gate.new("shinjuku")
-    # toke.to_gate(to_shibuya)
-    # toke.exit_gate(to_shibuya,to_gate)
   end
 
-  def test_stamped
+  # 渋谷行きのチケットを購入し、改札を通ると、チケットに”shibuya”のスタンプが押される
+  def test_stamped_shibuya
     # チケットを購入し、改札を通ると、チケットにスタンプが押されること
     assert_equal("shibuya", @toke.to_gate(@cicket_to_shibuya))
+  end
+
+  # 新宿行きなら"shinjuku"が押される
+  def test_stamped_shinjuku
+    assert_equal("shinjuku", @toke.to_gate(@cicket_to_shinjuku))
   end
 
   # 正常系
