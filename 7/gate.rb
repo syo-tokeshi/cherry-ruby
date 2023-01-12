@@ -8,7 +8,8 @@ class Gate
   end
 
   def self.jugde(cicket,to_gate)
-    return if cicket.stamped != to_gate.name
+    # チケットのスタンプと、最初に決めた行き先が異なっていたら
+    raise("チケットのスタンプと行き先が間違っています") if cicket.stamped != to_gate.name
 
     p "無事出れました"
     # p "押されたスタンプ#{cicket.stamped} 行き先#{to_gate.name}"
