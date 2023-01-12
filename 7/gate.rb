@@ -7,6 +7,7 @@ class Gate
     @name = name
   end
 
+  # 受け取ったチケットのスタンプと行き先が正しいか判断する
   def self.jugde(cicket,to_gate)
     # チケットのスタンプと、最初に決めた行き先が異なっていたら
     return p "チケットのスタンプと行き先が間違っています" if cicket.stamped != to_gate.name

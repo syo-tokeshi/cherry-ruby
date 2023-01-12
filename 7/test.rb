@@ -13,6 +13,7 @@ require 'minitest/autorun'
 
 class GateTest < Minitest::Test
 
+  # 最初に呼ばれます。rspecで言う「before」の機能です
   def setup
     @toke = Human.new("toke")
     @cicket_to_shibuya = Cicket.new(160,"shibuya")
