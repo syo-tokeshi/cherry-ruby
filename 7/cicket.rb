@@ -1,4 +1,5 @@
 class Cicket
+  # fare: 料金, to:チケットの行き先, stamped: 最初にチケットを通すと行き先は記録される
   attr_accessor :fare, :to, :stamped
 
   def initialize(fare,to)

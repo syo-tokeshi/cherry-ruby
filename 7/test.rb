@@ -6,10 +6,10 @@ require 'minitest/autorun'
 
 # 手続き的に書いた、最初のコード
 # toke = Human.new("toke")
-# to_tomi = Cicket.new(160,"tomi")
-# to_gate = Gate.new("tomi")
-# toke.to_gate(to_tomi)
-# toke.exit_gate(to_tomi,to_gate)
+# to_shibuya = Cicket.new(160,"shibuya")
+# to_gate = Gate.new("shibuya")
+# toke.to_gate(to_shibuya)
+# toke.exit_gate(to_shibuya,to_gate)
 
 class GateTest < Minitest::Test
 
